@@ -1,0 +1,41 @@
+@mixin clear {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin clear-list {
+    @include clear;
+    list-style: none;
+}
+
+@mixin btn {
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid $orange;
+    text-transform: uppercase;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: $orange;
+    color: #fff;
+    transition: .3s all;
+
+    &:hover {
+        background: #fff;
+        color: $orange;
+    }
+    
+}
+
+@mixin catamaran-black {
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 900;
+    color: $title_lightdark;
+
+}
+
+@mixin muli-light  {
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
+    color: $text_lightdark;
+}

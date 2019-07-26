@@ -1,0 +1,73 @@
+@import "partials/params";
+@import "partials/mixins";
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,900&display=swap');
+
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    color:#fff;
+    
+    &__subtitle {
+        font-size: 26px;
+        font-family: 'Catamaran', sans-serif;
+        text-transform: uppercase;
+        margin-top: 120px;
+        margin-bottom: 15px;
+    }
+
+    &__title {
+        margin-bottom: 130px;
+        font-family: 'Catamaran', sans-serif;
+        font-size: 220px;
+        font-weight: 900;
+        text-transform: uppercase;
+        opacity: .4;
+        color: #fff;
+        line-height: .8;
+    }
+   
+    &__booking {
+        width: 670px;
+        z-index: 100;
+            
+        & .booking__text{
+            font-family: 'Muli', sans-serif;
+            font-size: 24px;
+        }
+    
+        & .booking__btn {
+            @include btn;
+            width: 240px;
+            text-align: center;
+            padding: 15px;
+            margin-top: 60px;
+            font-size: 18px;
+            }
+        }
+    
+
+    
+    &__mountains {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+   
+
+    &__heel {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    &__boarder {
+        position: absolute;
+        top: 27%;
+        left: 41%;
+    }
+}

@@ -1,0 +1,42 @@
+@import "partials/params";
+@import "partials/mixins";
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,900&display=swap');
+
+html, body {
+    @include clear;
+    width: 100%;    
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    @include clear;
+}
+
+a {
+    text-decoration: none;
+}
+
+.view-port {
+    min-width: $view-port;
+    margin: 0 auto;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+.first-screen {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    flex-grow: 1;
+    height: 100vh;
+    background:radial-gradient(circle at 50% 60%, #71ace3, #4e7eaa, #325785);
+    // background-image: url('img/mountains.png');
+}
+// fonts catamaran black
+// muli

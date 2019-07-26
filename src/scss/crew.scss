@@ -1,0 +1,84 @@
+@import "partials/params";
+@import "partials/mixins";
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,900&display=swap');
+
+.crew {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 160px;
+
+    &__title {
+        @include catamaran-black;
+        font-size: 60px;
+        text-transform: uppercase;
+    }
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & .profile__img {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            }
+        
+        & .profile__img--first{
+            background: url("img/crew_1.png") no-repeat;
+            background-position: 50% 100%;
+        }
+
+        & .profile__img--second{
+            background: url("img/crew_2.png") no-repeat;
+            background-position: 60% 0%;
+        }
+
+        & .profile__img--third{
+            background: url("img/crew_3.png") no-repeat;
+            background-position: 50% 50%;
+        }
+
+        & .profile__img--fourth{
+            background: url("img/crew_4.png") no-repeat;
+            background-position: 50% 10%;
+        }
+
+          
+
+
+        // & .profile__img{
+        //     margin: 20px 0;
+        //     border-radius: 50%;
+        //     width: 240px;
+        //     height: 240px;
+        //     transition: .3s all;
+        //     transform: scale(.9);
+        //     &:hover{
+        //         // box-sizing: border-box;
+        //         border: 2px solid $orange;
+        //         transform: scale(1);
+        //     }
+        // }
+        & .profile__job{
+            @include muli-light;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        & .profile__name{
+            @include catamaran-black;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+
+    }
+}

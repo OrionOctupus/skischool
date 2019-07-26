@@ -1,0 +1,73 @@
+@import "partials/params";
+@import "partials/mixins";
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,900&display=swap');
+
+
+.offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    margin-top: 120px;
+    margin-bottom: 160px;
+    
+    
+    &__title{
+        @include catamaran-black;
+        font-size: 60px;
+        text-transform: uppercase;
+        // color: $title_lightdark;
+        margin-bottom: 50px;
+    }
+
+    &__text{
+        @include muli-light;
+        width: 930px;
+        font-size: 18px;
+        // color: $text_lightdark;
+        line-height: 30px;
+        margin-bottom: 80px;
+        text-align: center;
+    }
+
+    &__price {
+        display: flex;
+        justify-content: space-between;
+        width: 930px;
+
+    }
+
+    &__tile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & .tile__img {
+            margin-bottom: 40px;
+        }
+
+        & .tile__title {
+            @include muli-light;
+            font-size: 14px;
+            text-transform: uppercase;
+            // color: $text_lightdark;
+        }
+
+        & .tile__text {
+            @include catamaran-black;
+            font-size: 24px;
+            text-transform: uppercase;
+            // color: $title_lightdark;
+           
+        }
+
+        & .tile__btn {
+            @include btn;
+            width: 120px;
+            padding: 12px 0;
+            text-align: center;
+            margin-top: 30px;
+        }
+    }
+}

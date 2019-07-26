@@ -1,0 +1,58 @@
+@import "partials/params";
+@import "partials/mixins";
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,900&display=swap');
+
+$font-color: #fff;
+
+.nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex: 0 0 $nav-height;
+    background-color: transparent;
+    margin-top : 35px;   
+    font-family: 'Muli';
+    font-size: $fsize;
+    z-index: 100;
+
+    &__menu {
+        @include clear-list;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        position: relative;
+        margin : 10px 21px;   
+    }
+
+    &__link {
+        color: $font-color;
+        margin-bottom: 10px;
+        display: block;
+
+        &:hover {
+            .nav__menu-border {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__menu-border {
+        position: absolute;
+        bottom: 0;
+        display: block;
+        height: 1px;
+        width: 100%;
+        opacity: 0;
+        background-color: $font-color;
+        transition: .3s opacity;
+    }
+
+}

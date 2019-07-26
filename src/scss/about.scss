@@ -1,0 +1,61 @@
+@import "partials/params";
+@import "partials/mixins";
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,900&display=swap');
+
+.about  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: url("img/about_bg.png") no-repeat;
+    height: 1080px;
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        @include catamaran-black;
+        font-size: 40px;
+        line-height: 1.1;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        @include muli-light;
+        width: 805px;
+        font-size: 18px;
+        margin-top: 50px;
+        margin-bottom: 80px;
+
+        & .about__paragraph {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__stat{
+        display: flex;
+        
+    }
+
+    &__data {
+        display: flex;
+        flex-direction: column;
+        font-family: 'Catamaran', sans-serif;
+        text-transform: uppercase;
+        margin-right: 90px;
+
+        & .data__dig {
+            font-size: 65px;
+            font-weight: 900;
+            color: $orange;
+        }
+        & .data__text {
+            font-size: 22px;
+            font-weight: 400;
+            color: $title_lightdark;
+
+        }
+    }
+}
