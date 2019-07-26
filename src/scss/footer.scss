@@ -1,0 +1,62 @@
+@import "partials/params";
+@import "partials/mixins";
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Catamaran:400,900&display=swap');
+
+
+.footer {
+
+    &__contact {
+        width: 640px;
+        height: 640px;
+        background-color: $text_lightdark;
+
+        & .footer__title {
+
+        }
+
+        & .contact__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 350px;
+            height: 450px;
+
+            & .contact__item{
+                display: flex;
+
+
+
+                & .item__icon{
+                    // display:inline-block;
+                    width: 25px;
+                    height: 25px;
+
+                    border: 1px solid black;
+                    // background: url(img/social_icon_sprite.png) no-repeat;
+                }
+
+                & .item__text {
+                    display:block;
+                    height: 60px;
+                    margin-left: 20px;
+                    border: 1px solid black;
+                    // display: inline-block;
+                    @include muli-light;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    color:#fff;
+
+                }
+            }
+        }
+
+    }
+       
+    
+
+
+    &__map {
+
+    }
+}
