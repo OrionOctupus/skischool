@@ -5,58 +5,126 @@
 
 
 .footer {
+    display: flex;
 
-    &__contact {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 640px;
         height: 640px;
-        background-color: $text_lightdark;
+        background-color: $title_lightdark;
 
         & .footer__title {
+            @include catamaran-black;
+            color: #fff;
+            font-size: 60px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
 
         }
 
-        & .contact__list {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 350px;
-            height: 450px;
+        & .footer__contact {
+            
 
-            & .contact__item{
-                display: flex;
+            & .contact__list {
+                @include clear;
 
+                & .list__item{
+                    list-style: none;
+                    display: flex;
+                    margin-bottom: 10px;
 
+                    & .item__icon{
+                        background: url("img/social_icon_sprite.png") no-repeat;
+                        display: block;
+                        width: 25px;
+                        height: 25px;
+                    }
 
-                & .item__icon{
-                    // display:inline-block;
-                    width: 25px;
-                    height: 25px;
+                    & .item__icon--phone {
+                        background-position: 4% -1%;
+                    }
 
-                    border: 1px solid black;
-                    // background: url(img/social_icon_sprite.png) no-repeat;
-                }
+                    & .item__icon--adress {
+                        background-position: 4% 16%;
+                        margin-bottom: 40px;
+                    }
 
-                & .item__text {
-                    display:block;
-                    height: 60px;
-                    margin-left: 20px;
-                    border: 1px solid black;
-                    // display: inline-block;
-                    @include muli-light;
-                    font-size: 18px;
-                    text-transform: uppercase;
-                    color:#fff;
+                    & .item__icon--mail {
+                        background-position: 4% 43%;
+                    }
 
+                    & .item__icon--open {
+                        background-position: 4% 60%;
+                    }
+
+                    & .item__text {
+                        @include muli-light;
+                        color: #fff;
+                        margin-left: 15px;
+                        // margin-top: 10px;
+                        text-transform: uppercase;
+                        /* display: block; */
+                        width: 360px;
+                        height: 40px;
+                        font-size: 18px;
+                        /* border: 1px solid green; */
+                    }
                 }
             }
+
+            & .contact__social {
+                margin-top: 70px;
+
+                & .social__link {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 30px;
+                    background: url("img/social_icon_sprite.png") no-repeat;
+                    vertical-align: middle;
+                    transition: 1s all ease-in-out;
+
+                    &:hover {
+                        transform: rotate(360deg);
+
+                    }
+                }
+
+
+                & .social__link--tw {
+                    background-position: -4% 101%;
+                }
+                
+                & .social__link--fb {
+                    background-position: 51% 101%;
+                }
+                
+                & .social__link--ins {
+                    background-position: 106% 101%;
+                }
+            }
+            
+            & .contact__source {
+                margin-top: 60px;
+                color: #fff;
+
+                & .source__link {
+                    text-decoration: none;
+                    color: #fff;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
         }
-
-    }
        
-    
-
-
-    &__map {
 
     }
+      
+   
 }
