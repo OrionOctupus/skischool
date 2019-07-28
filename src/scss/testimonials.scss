@@ -5,20 +5,23 @@
 
 
 .testimonials {
-
+    position: relative;
+    width: 100%;
+    height: 760px;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
+    justify-content: center;
     align-items: center;
 
     &__title {
         @include catamaran-black;
         text-transform: uppercase;
         font-size: 60px;
+        margin-bottom: 60px;
     }
 
-    &__slider {
-
+    & .slider__slide {
+        
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -26,28 +29,52 @@
 
 
         & .slide__foto {
-            position: relative;
+            
             width: 240px;
             height: 150px;
-            border: 1px solid black;
-            background: url("img/testi_img_1.png") no-repeat;
-            background-position: 50% 50%;
-        }
-
-        & .slide__foto::before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: url("img/quote.png") no-repeat;
-            background-position: 0 0;
+            background: url("img/testi_img_1.png") no-repeat  50% 50%,
+            url("img/quote.png") no-repeat 0 100%;
+            margin-bottom: 15px;
+            
         }
 
         & .slide__name {
-
+            @include catamaran-black;
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
         }
 
-        & .slide__qoute {
+        & .slide__quote {
+            width: 830px;
+            @include muli-light;
+            font-size: 18px;
+            text-align: center;
+        }
 
+        
+    }
+
+    &__dots {
+        position: absolute;
+        bottom: 10%;
+        left: 47%;
+        // width: 10px;
+        // height: 10px;
+        // border: 1px solid black;
+
+        & .testimonials__dot {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%; 
+            // border: 1px solid black;
+            margin-right: 10px;
+            background-color: $dot_grey;
+        }
+
+        & .active {
+            background-color: $orange;
         }
     }
 

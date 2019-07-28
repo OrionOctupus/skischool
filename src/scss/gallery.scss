@@ -1,0 +1,12 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.gallery {
+    @include clear;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__link {
+        align-self: flex-start;
+    }
+}
