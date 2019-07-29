@@ -20,40 +20,83 @@
         margin-bottom: 60px;
     }
 
+     
+
+    &__slider {
+        
+
     & .slider__slide {
         
-        display: flex;
+        top: 0;
+        left: 0;
+        // display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
+        display: none;
+               
 
         & .slide__foto {
             
             width: 240px;
             height: 150px;
-            background: url("img/testi_img_1.png") no-repeat  50% 50%,
-            url("img/quote.png") no-repeat 0 100%;
             margin-bottom: 15px;
+           
             
         }
+        
+        & .slide__foto--one{
+            background:url("img/testi_img_1.png") no-repeat  50% 50%,    
+            url("img/quote.png") no-repeat 0 100%;
+        }
 
+        & .slide__foto--two{
+            background:url("img/testi_img_2.png") no-repeat  50% 50%,    
+            url("img/quote.png") no-repeat 0 100%;
+        }
+
+        & .slide__foto--three{
+            background:url("img/testi_img_3.png") no-repeat  50% 50%,    
+            url("img/quote.png") no-repeat 0 100%;
+        }
+
+        & .slide__foto--four{
+            background:url("img/testi_img_4.png") no-repeat  50% 50%,    
+            url("img/quote.png") no-repeat 0 100%;
+        }
+
+        & .slide__foto--five{
+            background:url("img/testi_img_5.png") no-repeat  50% 50%,    
+            url("img/quote.png") no-repeat 0 100%;
+        }
+        // 
         & .slide__name {
             @include catamaran-black;
             font-size: 18px;
             text-transform: uppercase;
             margin-bottom: 40px;
+            
         }
 
         & .slide__quote {
             width: 830px;
+            height: 50px;
             @include muli-light;
             font-size: 18px;
             text-align: center;
+            
         }
 
         
     }
+   }
+
+   & .show {
+
+    display: flex;
+   
+    
+    }   
 
     &__dots {
         position: absolute;
@@ -71,6 +114,7 @@
             // border: 1px solid black;
             margin-right: 10px;
             background-color: $dot_grey;
+            cursor: pointer;
         }
 
         & .active {
