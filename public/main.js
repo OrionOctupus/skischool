@@ -22,3 +22,19 @@ for( let i=0; i < dot.length; i++){
     };
 }
 
+//parallax
+
+let boarder = doc.querySelector('.header__boarder');
+let heel = doc.querySelector('.header__heel');
+let mountains = doc.querySelector('.header__mountains');
+
+let scrolled = 0;
+
+window.onscroll = function() {
+    scrolled = window.pageYOffset || document.documentElement.scrollTop;
+    console.log(scrolled + 'px');
+    boarder.style.top = scrolled/100 + 27 + '%';
+    boarder.style.left = scrolled/100 + 41 + '%';
+    mountains.style.bottom = '-' + scrolled*1.1 + 'px';
+    // scrolled > 0 ? heel.style.zIndex = 2:heel.style.zIndex = 0;
+}
